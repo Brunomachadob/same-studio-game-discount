@@ -1,23 +1,22 @@
 {
   "files": {
-    "main.css": "/smart-game-discounts/static/css/main.5f361e03.chunk.css",
-    "main.js": "/smart-game-discounts/static/js/main.63368311.chunk.js",
-    "main.js.map": "/smart-game-discounts/static/js/main.63368311.chunk.js.map",
+    "main.css": "/smart-game-discounts/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/smart-game-discounts/static/js/main.57eeac83.chunk.js",
+    "main.js.map": "/smart-game-discounts/static/js/main.57eeac83.chunk.js.map",
     "runtime-main.js": "/smart-game-discounts/static/js/runtime-main.f9b45960.js",
     "runtime-main.js.map": "/smart-game-discounts/static/js/runtime-main.f9b45960.js.map",
-    "static/js/2.15d940e9.chunk.js": "/smart-game-discounts/static/js/2.15d940e9.chunk.js",
-    "static/js/2.15d940e9.chunk.js.map": "/smart-game-discounts/static/js/2.15d940e9.chunk.js.map",
+    "static/js/2.b3efc42e.chunk.js": "/smart-game-discounts/static/js/2.b3efc42e.chunk.js",
+    "static/js/2.b3efc42e.chunk.js.map": "/smart-game-discounts/static/js/2.b3efc42e.chunk.js.map",
     "index.html": "/smart-game-discounts/index.html",
-    "precache-manifest.351c8890584766829846b7aa79200e43.js": "/smart-game-discounts/precache-manifest.351c8890584766829846b7aa79200e43.js",
+    "precache-manifest.e7cfd3b8add3b72af7eb17065ab12b3e.js": "/smart-game-discounts/precache-manifest.e7cfd3b8add3b72af7eb17065ab12b3e.js",
     "service-worker.js": "/smart-game-discounts/service-worker.js",
-    "static/css/main.5f361e03.chunk.css.map": "/smart-game-discounts/static/css/main.5f361e03.chunk.css.map",
-    "static/js/2.15d940e9.chunk.js.LICENSE.txt": "/smart-game-discounts/static/js/2.15d940e9.chunk.js.LICENSE.txt",
-    "static/media/logo.svg": "/smart-game-discounts/static/media/logo.5d5d9eef.svg"
+    "static/css/main.5ecd60fb.chunk.css.map": "/smart-game-discounts/static/css/main.5ecd60fb.chunk.css.map",
+    "static/js/2.b3efc42e.chunk.js.LICENSE.txt": "/smart-game-discounts/static/js/2.b3efc42e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.f9b45960.js",
-    "static/js/2.15d940e9.chunk.js",
-    "static/css/main.5f361e03.chunk.css",
-    "static/js/main.63368311.chunk.js"
+    "static/js/2.b3efc42e.chunk.js",
+    "static/css/main.5ecd60fb.chunk.css",
+    "static/js/main.57eeac83.chunk.js"
   ]
 }
