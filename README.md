@@ -8,12 +8,20 @@ By default, only one rule will be applied, being the one with higher discount ra
 
 #### Same studio discont
 
-* For each game you have in your library from that same sutdio, you get X% discount, up to Y%.
+* For each game you have in your library from that same studio, you get X% discount, up to Y%.
 
 #### Franchise discounts
 
 * If you have the previous game from that franchise in your library, you get X% discount for the sequel
 * If you have any other game from this same franchise in your library, you get X% per game, up to Y%
+
+## Todo
+
+[x] Same studio rule
+[x] Same franchise rule
+[ ] Rule edition
+[ ] Game edition
+[ ] Sequel rule
 
 ## Development
 
