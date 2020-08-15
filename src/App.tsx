@@ -65,6 +65,10 @@ export default function App() {
         </Toolbar>
       </AppBar>
       <div className={classes.root}>
+        <Typography color="textSecondary">
+          This is a small toy application showcasing a fidelity program that studios would apply on a 
+          market place (Steam for example) that would give discounts based on games the user already have in their library.
+        </Typography>
         <Rules rules={RULES}></Rules>
         <Store games={storeGames} onBuyGame={onBuyGame} />
         <Library games={libraryGames} onRemoveGame={onRemoveLibraryGame} />
