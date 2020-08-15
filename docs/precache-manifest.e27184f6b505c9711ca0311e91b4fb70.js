@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "51e51b498a5a774b0ae1681715749441",
+    "revision": "60d75d2f573653814b72113740c8f983",
     "url": "/smart-game-discounts/index.html"
   },
   {
