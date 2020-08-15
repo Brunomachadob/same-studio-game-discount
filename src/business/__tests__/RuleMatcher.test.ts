@@ -6,6 +6,7 @@ describe('RuleMatcher', () => {
     const sameStudioRule: Rule = {
         id: '1',
         type: RuleType.SAME_STUDIO,
+        studioId: '1',
         maxPercentage: 10,
         percentage: 1
     };
@@ -13,6 +14,7 @@ describe('RuleMatcher', () => {
     const sameFranchiseRule: Rule = {
         id: '2',
         type: RuleType.SAME_FRANCHISE,
+        studioId: '1',
         maxPercentage: 10,
         percentage: 1
     };
@@ -20,16 +22,24 @@ describe('RuleMatcher', () => {
     const openWorldTagRule: Rule = {
         id: '3',
         type: RuleType.CONTAINS_TAG,
+        studioId: '1',
         maxPercentage: 10,
         percentage: 1,
         options: {
-            studioId: '1',
             tags: ['open-world'],
         },
     };
 
+    const sequelRule: Rule = {
+        id: '3',
+        type: RuleType.SEQUEL,
+        studioId: '1',
+        maxPercentage: 10,
+        percentage: 10,
+    };
+
     const matrix1: Game = { id: '1', name: 'Matrix 1', price: 10, studioId: '1', franchise: 'matrix', tags: ['rpg'] };
-    const matrix2: Game = { id: '2', name: 'Matrix 2', price: 10.5, studioId: '1', franchise: 'matrix', tags: ['rpg', 'open-world'] };
+    const matrix2: Game = { id: '2', name: 'Matrix 2', price: 10.5, studioId: '1', franchise: 'matrix', prequelId: '1', tags: ['rpg', 'open-world'] };
     const matrix3: Game = { id: '3', name: 'Matrix 3', price: 20, studioId: '1', franchise: 'matrix', tags: ['rpg', 'open-world'] };
 
     const elderScrolls1: Game = { id: '4', name: 'Elder Scrolls', price: 40, studioId: '2', franchise: 'elder-scrolls', tags: ['rpg', 'open-world'] };
@@ -83,6 +93,28 @@ describe('RuleMatcher', () => {
 
         it('should return 1 since 1 the game in the library are from the same studio and same tag', () => {
             const matches = countMatches(openWorldTagRule, matrix2, [matrix1, matrix3, elderScrolls1, elderScrolls2]);
+            expect(matches).toEqual(1);
+        });
+    });
+
+    describe('SEQUEL', () => {
+        it('should return 0 since the library is empty', () => {
+            const matches = countMatches(sequelRule, matrix1, []);
+            expect(matches).toEqual(0);
+        });
+
+        it('should return 0 since the games in the library are not from same studio', () => {
+            const matches = countMatches(sequelRule, matrix3, [elderScrolls2]);
+            expect(matches).toEqual(0);
+        });
+
+        it('should return 0 since the games in the library are from same studio but not prequel', () => {
+            const matches = countMatches(sequelRule, matrix3, [matrix1]);
+            expect(matches).toEqual(0);
+        });
+
+        it('should return 1 since 1 the game in the library are from the same studio and is a prequel', () => {
+            const matches = countMatches(sequelRule, matrix2, [matrix1, matrix3, elderScrolls1, elderScrolls2]);
             expect(matches).toEqual(1);
         });
     });

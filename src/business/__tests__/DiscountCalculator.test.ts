@@ -7,6 +7,7 @@ describe('DiscountCalculator', () => {
     const sameStudioRule: Rule = {
         id: '1',
         type: RuleType.SAME_STUDIO,
+        studioId: '1',
         maxPercentage: 10,
         percentage: 1
     };
@@ -57,11 +58,12 @@ describe('DiscountCalculator', () => {
             .mockImplementationOnce(() => 20);
 
         const store = [matrix1];
-        const library = [elderScrolls1];
+        const library = [matrix2];
 
         const rule1: Rule = {
             id: '1',
             type: RuleType.SAME_STUDIO,
+            studioId: matrix1.studioId,
             maxPercentage: 50,
             percentage: 2
         };
@@ -69,6 +71,7 @@ describe('DiscountCalculator', () => {
         const rule2: Rule = {
             id: '2',
             type: RuleType.SAME_STUDIO,
+            studioId: matrix1.studioId,
             maxPercentage: 15,
             percentage: 1
         };
