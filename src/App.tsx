@@ -4,17 +4,16 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import GitHubIcon from '@material-ui/icons/GitHub';
+import { IconButton } from '@material-ui/core';
 
 import { Game } from './models/Game';
-import { ALL_GAMES } from './data/mock';
+import { ALL_GAMES, RULES } from './data/mock';
 
 import Library from './components/Library';
 import Store from './components/Store';
 import Rules from './components/Rules';
 
 import { applyDiscounts } from './business/DiscountCalculator';
-import { Rule, RuleType } from './models/Rule';
-import { IconButton } from '@material-ui/core';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -31,11 +30,6 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 );
 
-const rules: Rule[] = [
-  { id: '1', type: RuleType.SAME_STUDIO, percentage: 5, maxPercentage: 10, studioId: 'Universal' },
-  { id: '2', type: RuleType.CONTAINS_TAG, percentage: 50, maxPercentage: 100, studioId: 'Bethesda', options: { tags: ['open-world'] } },
-];
-
 export default function App() {
   const classes = useStyles();
 
@@ -45,7 +39,7 @@ export default function App() {
   useEffect(() => {
     const libraryGameIds = libraryGames.map((game) => game.id);
     const storeGames = ALL_GAMES.filter((game: Game) => !libraryGameIds.includes(game.id))
-    const storeGamesWithDiscount = applyDiscounts(rules, storeGames, libraryGames);
+    const storeGamesWithDiscount = applyDiscounts(RULES, storeGames, libraryGames);
 
     setStoreGames(storeGamesWithDiscount);
   }, [libraryGames])
@@ -63,7 +57,7 @@ export default function App() {
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
-            Smart game discounts
+            Studio fidelity program
           </Typography>
           <IconButton edge="start" color="inherit" aria-label="github" target="blank" href="https://github.com/Brunomachadob/smart-game-discounts">
             <GitHubIcon />
@@ -71,7 +65,7 @@ export default function App() {
         </Toolbar>
       </AppBar>
       <div className={classes.root}>
-        <Rules rules={rules}></Rules>
+        <Rules rules={RULES}></Rules>
         <Store games={storeGames} onBuyGame={onBuyGame} />
         <Library games={libraryGames} onRemoveGame={onRemoveLibraryGame} />
       </div>

@@ -39,7 +39,7 @@ export default function Library({ games, onRemoveGame }: Props) {
 
   return (
     <Paper elevation={0} className={classes.root}>
-      <Typography variant="h4">Library</Typography>
+      <Typography variant="h4">My Library</Typography>
       <div className={classes.gameContainer}>
         {
             games.map((game: Game) => 

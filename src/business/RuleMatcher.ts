@@ -6,11 +6,24 @@ export function countMatches(
     storeGame: Game,
     library: Game[]
 ): number {
+    if (storeGame.studioId !== rule.studioId) {
+        return 0;
+    }
+
+    if (rule.type === RuleType.SEQUEL) {
+        if (!storeGame.prequelId) {
+            return 0;
+        }
+
+        const prequelGame = library.find((game) => game.id === storeGame.prequelId);
+
+        return prequelGame ? 1 : 0
+    }
+
     return library.reduce((currentMatches, libraryGame) => {
-        const matchesRule = storeGame.studioId === rule.studioId
-            && (sameStudio(rule.type, storeGame, libraryGame)
+        const matchesRule = sameStudio(rule.type, storeGame, libraryGame)
             || sameFranchise(rule.type, storeGame, libraryGame)
-            || containsTag(rule.type, rule.studioId, libraryGame, rule.options as ContainsTagOption))
+            || containsTag(rule.type, rule.studioId, libraryGame, rule.options as ContainsTagOption)
 
         return currentMatches + (matchesRule ? 1 : 0)  
     }, 0);

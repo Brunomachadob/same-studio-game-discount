@@ -32,13 +32,13 @@ export default function Rules({ rules }: Props) {
 
   return (
     <Paper elevation={0} className={classes.root}>
-      <Typography variant="h4">Rules</Typography>
+      <Typography variant="h4">Discount Rules</Typography>
       <div className={classes.rulesContainer}>
         {
             rules.map((rule: Rule) => 
               <Card key={rule.id} elevation={3} className={classes.rule}>
                 <CardContent>
-                  <Typography>
+                  <Typography color="textSecondary">
                     {rule.studioId}
                   </Typography>
                   <Typography>

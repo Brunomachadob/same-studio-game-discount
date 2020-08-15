@@ -6,7 +6,7 @@ By default, only one rule will be applied, being the one with higher discount ra
 
 ## Discount Rules
 
-#### Same studio discont
+#### Same studio discount
 
 * For each game you have in your library from that same studio, you get X% discount, up to Y%.
 
@@ -19,9 +19,10 @@ By default, only one rule will be applied, being the one with higher discount ra
 
 [x] Same studio rule
 [x] Same franchise rule
-[ ] Rule edition
-[ ] Game edition
-[ ] Sequel rule
+[x] Sequel rule
+[ ] Discount detail on Store game
+[ ] Rule CRUD
+[ ] Game CRUD
 
 ## Development
 

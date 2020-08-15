@@ -1,6 +1,7 @@
 export enum RuleType {
     SAME_STUDIO,
     SAME_FRANCHISE,
+    SEQUEL,
     CONTAINS_TAG,
 };
 

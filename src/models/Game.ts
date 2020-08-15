@@ -4,5 +4,6 @@ export interface Game {
     price: number;
     studioId: string;
     franchise: string;
+    prequelId?: string;
     tags: string[];
 };
