@@ -6,4 +6,11 @@ export interface Game {
     franchise: string;
     prequelId?: string;
     tags: string[];
+    discountInfo?: DiscountInfo;
+};
+
+export interface DiscountInfo {
+    price: number;
+    percentage: number;
+    info: string;
 };

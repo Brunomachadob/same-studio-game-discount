@@ -1,6 +1,7 @@
 import { Rule } from "../models/Rule";
-import { Game } from "../models/Game";
+import { Game, DiscountInfo } from "../models/Game";
 import { countMatches } from "./RuleMatcher";
+import { evaluateDiscountDescription } from "./RuleDescriptionEvaluator";
 
 export function applyDiscounts(
     rules: Rule[],
@@ -9,31 +10,26 @@ export function applyDiscounts(
 ): Game[] {
     return store.map((storeGame) => ({
         ...storeGame,
-        price: calculateNewPrice(rules, storeGame, library)
+        discountInfo: calculateDiscountInfo(rules, storeGame, library)
     }));
 }
 
-function calculateNewPrice(
+function calculateDiscountInfo(
     rules: Rule[],
     game: Game,
     library: Game[]
-): number {
-    const percentage = calculatePercentage(rules, game, library);
-
-    return game.price - (game.price * percentage / 100);
-}
-
-function calculatePercentage(
-    rules: Rule[],
-    game: Game,
-    library: Game[]
-): number {
-    const percentages = rules.map((rule) => {
+): DiscountInfo | undefined {
+    const discountInfos: DiscountInfo[] = rules.map((rule) => {
         const matchCount = countMatches(rule, game, library) || 0;
+        const percentage = Math.min(matchCount * rule.percentage, rule.maxPercentage);
+        const info = evaluateDiscountDescription(percentage, matchCount, rule.type, rule.options);
+        const price = game.price - (game.price * percentage / 100)
 
-        return Math.min(matchCount * rule.percentage, rule.maxPercentage);
-    }).sort();
+        return { percentage, info, price };
+    })
+    .filter((info) => info.percentage > 0)
+    .sort((a, b) => a.percentage - b.percentage);
 
-    return percentages.length ? percentages[percentages.length - 1] : 0;
+    return discountInfos.length ? discountInfos[discountInfos.length - 1] : undefined;
 }
 

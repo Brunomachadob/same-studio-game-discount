@@ -48,7 +48,11 @@ describe('DiscountCalculator', () => {
 
         expect(storeWithDiscounts).toEqual([{
             ...matrix1,
-            price: 9
+            discountInfo: {
+                info: '10% discount because you own 10 games of the same studio',
+                percentage: 10,
+                price: 9,
+            }
         }]);
     });
 
@@ -80,7 +84,11 @@ describe('DiscountCalculator', () => {
 
         expect(storeWithDiscounts).toEqual([{
             ...matrix1,
-            price: 8.5
+            discountInfo: {
+                info: '15% discount because you own 20 games of the same studio',
+                percentage: 15,
+                price: 8.5
+            }
         }]);
     });
 });
