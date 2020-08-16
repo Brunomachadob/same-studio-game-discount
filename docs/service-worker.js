@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/smart-game-discounts/precache-manifest.e27184f6b505c9711ca0311e91b4fb70.js"
+  "/smart-game-discounts/precache-manifest.3730d8a9ade71e2e56c0a238059b0257.js"
 );
 
 self.addEventListener('message', (event) => {

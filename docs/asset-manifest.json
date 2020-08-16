@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/smart-game-discounts/static/css/main.5ecd60fb.chunk.css",
-    "main.js": "/smart-game-discounts/static/js/main.eaa3bf96.chunk.js",
-    "main.js.map": "/smart-game-discounts/static/js/main.eaa3bf96.chunk.js.map",
+    "main.js": "/smart-game-discounts/static/js/main.5188c7b2.chunk.js",
+    "main.js.map": "/smart-game-discounts/static/js/main.5188c7b2.chunk.js.map",
     "runtime-main.js": "/smart-game-discounts/static/js/runtime-main.f9b45960.js",
     "runtime-main.js.map": "/smart-game-discounts/static/js/runtime-main.f9b45960.js.map",
-    "static/js/2.4b57e6c0.chunk.js": "/smart-game-discounts/static/js/2.4b57e6c0.chunk.js",
-    "static/js/2.4b57e6c0.chunk.js.map": "/smart-game-discounts/static/js/2.4b57e6c0.chunk.js.map",
+    "static/js/2.99938549.chunk.js": "/smart-game-discounts/static/js/2.99938549.chunk.js",
+    "static/js/2.99938549.chunk.js.map": "/smart-game-discounts/static/js/2.99938549.chunk.js.map",
     "index.html": "/smart-game-discounts/index.html",
-    "precache-manifest.e27184f6b505c9711ca0311e91b4fb70.js": "/smart-game-discounts/precache-manifest.e27184f6b505c9711ca0311e91b4fb70.js",
+    "precache-manifest.3730d8a9ade71e2e56c0a238059b0257.js": "/smart-game-discounts/precache-manifest.3730d8a9ade71e2e56c0a238059b0257.js",
     "service-worker.js": "/smart-game-discounts/service-worker.js",
     "static/css/main.5ecd60fb.chunk.css.map": "/smart-game-discounts/static/css/main.5ecd60fb.chunk.css.map",
-    "static/js/2.4b57e6c0.chunk.js.LICENSE.txt": "/smart-game-discounts/static/js/2.4b57e6c0.chunk.js.LICENSE.txt"
+    "static/js/2.99938549.chunk.js.LICENSE.txt": "/smart-game-discounts/static/js/2.99938549.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.f9b45960.js",
-    "static/js/2.4b57e6c0.chunk.js",
+    "static/js/2.99938549.chunk.js",
     "static/css/main.5ecd60fb.chunk.css",
-    "static/js/main.eaa3bf96.chunk.js"
+    "static/js/main.5188c7b2.chunk.js"
   ]
 }

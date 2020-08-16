@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "60d75d2f573653814b72113740c8f983",
+    "revision": "02c99e95fe505caf1c187959db779896",
     "url": "/smart-game-discounts/index.html"
   },
   {
-    "revision": "e96dfcc70b506fabdccc",
+    "revision": "bb708844d25c3706f15a",
     "url": "/smart-game-discounts/static/css/main.5ecd60fb.chunk.css"
   },
   {
-    "revision": "7aa14d1b5a2e77550f4c",
-    "url": "/smart-game-discounts/static/js/2.4b57e6c0.chunk.js"
+    "revision": "cc5654d33dc05f0eb4d4",
+    "url": "/smart-game-discounts/static/js/2.99938549.chunk.js"
   },
   {
     "revision": "89b0379e7bcda1a468d8b0343aeb4e53",
-    "url": "/smart-game-discounts/static/js/2.4b57e6c0.chunk.js.LICENSE.txt"
+    "url": "/smart-game-discounts/static/js/2.99938549.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e96dfcc70b506fabdccc",
-    "url": "/smart-game-discounts/static/js/main.eaa3bf96.chunk.js"
+    "revision": "bb708844d25c3706f15a",
+    "url": "/smart-game-discounts/static/js/main.5188c7b2.chunk.js"
   },
   {
     "revision": "c52e1ad1c240e2697857",
