@@ -33,7 +33,7 @@ export default function Store({ games, onBuyGame }: Props) {
       <div className={classes.gameContainer}>
         {
             games.map((game: Game) =>
-              <GameCard game={game} onBuyGame={onBuyGame} />
+              <GameCard key={game.id} game={game} onBuyGame={onBuyGame} />
             )
         }
       </div>

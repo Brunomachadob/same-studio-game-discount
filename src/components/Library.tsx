@@ -33,7 +33,7 @@ export default function Library({ games, onRemoveGame }: Props) {
       <div className={classes.gameContainer}>
         {
             games.map((game: Game) => 
-              <GameCard game={game} onRemoveGame={onRemoveGame}/>
+              <GameCard key={game.id} game={game} onRemoveGame={onRemoveGame}/>
             )
         }
       </div>

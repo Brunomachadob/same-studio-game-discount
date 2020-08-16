@@ -84,7 +84,7 @@ export default function GameCard({ game, onBuyGame, onRemoveGame }: Props) {
   }
 
   return (
-    <Card key={game.id} elevation={3} className={classes.root}>
+    <Card elevation={3} className={classes.root}>
       <CardContent>
         <Typography className={classes.studio} color="textSecondary">
             {game.studioId}
@@ -92,9 +92,7 @@ export default function GameCard({ game, onBuyGame, onRemoveGame }: Props) {
         <Typography variant="h5" component="h2">
             {game.name}
         </Typography>
-        {
-          priceButton
-        }
+        { priceButton }
         <Typography className={classes.tags}>
             {game.tags.map((tag) => `#${tag}`).join(' ')}
         </Typography>
