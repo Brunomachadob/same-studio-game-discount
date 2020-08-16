@@ -4,7 +4,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import GitHubIcon from '@material-ui/icons/GitHub';
-import { IconButton } from '@material-ui/core';
+import { IconButton, Grid } from '@material-ui/core';
 
 import { Game } from './models/Game';
 import { ALL_GAMES, RULES } from './data/mock';
@@ -18,11 +18,7 @@ import { applyDiscounts } from './business/DiscountCalculator';
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      flexGrow: 1,
       padding: theme.spacing(1),
-      '& > *': {
-        margin: theme.spacing(1),
-      }
     },
     title: {
       flexGrow: 1,
@@ -65,13 +61,25 @@ export default function App() {
         </Toolbar>
       </AppBar>
       <div className={classes.root}>
-        <Typography color="textSecondary">
-          This is a small toy application showcasing a fidelity program that studios would apply on a 
-          market place (Steam for example) that would give discounts based on games the user already have in their library.
-        </Typography>
-        <Rules rules={RULES}></Rules>
-        <Store games={storeGames} onBuyGame={onBuyGame} />
-        <Library games={libraryGames} onRemoveGame={onRemoveLibraryGame} />
+        <Grid container direction="column" spacing={2}>
+          <Grid item>
+            <Typography color="textSecondary">
+              This is a small toy application showcasing a fidelity program that studios would apply on a 
+              market place (Steam for example) that would give discounts based on games the user already have in their library.
+            </Typography>
+          </Grid>
+          <Grid item>
+            <Rules rules={RULES}></Rules>
+          </Grid>
+          <Grid container item direction="row">
+            <Grid item xs={12} sm={6}>
+              <Store games={storeGames} onBuyGame={onBuyGame} />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <Library games={libraryGames} onRemoveGame={onRemoveLibraryGame} />
+            </Grid>
+          </Grid>
+        </Grid>
       </div>
     </div>
   );
