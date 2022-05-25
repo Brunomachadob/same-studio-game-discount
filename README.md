@@ -17,13 +17,13 @@ By default, only one discount rule will be applied, being the one with higher di
 
 ## Todo
 
-[x] Same studio rule
-[x] Same franchise rule
-[x] Sequel rule
-[x] Discount detail on Store game
-[ ] Stack discounts
-[ ] Rule CRUD
-[ ] Game CRUD
+- [x] Same studio rule
+- [x] Same franchise rule
+- [x] Sequel rule
+- [x] Discount detail on Store game
+- [ ] Stack discounts
+- [ ] Rule CRUD
+- [ ] Game CRUD
 
 ## Development
 
